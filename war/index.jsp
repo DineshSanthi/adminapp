@@ -2,7 +2,7 @@
 
 <script>
 	var repo = window.repo ? window.repo : {};
-	repo.serviceUrl = "http://rest-service-repodepo.192.168.99.100.nip.io/";
+	repo.serviceUrl = "http://localhost:8082/";
 	
 	repo.objectDefinition = {};
 	
@@ -43,7 +43,7 @@
         .error(loadFailure);
     }
 
-    keycloak.init({ onLoad: 'login-required' })
+    keycloak.init({ onLoad: 'login-required',checkLoginIframe: false })
         .success(reloadData)
         .error(loadFailure);
     
@@ -93,7 +93,7 @@
             font: normal 10px arial, tahoma, sans-serif;
         }
     </style>
-    <link rel="stylesheet" href="RepoDepo.css?isc_version=12.0p_2018-06-30.css">
+    <link rel="stylesheet" href="HelloWorld.css?isc_version=12.0p_2018-06-30.css">
     
 </head>
 <body>
@@ -115,7 +115,7 @@
 var isomorphicDir = "helloworld/sc/";
 document.getElementById('loadingMsg').innerHTML = 'Loading Core API...';
 </script>
-<script src="helloworld/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <!--include the SC Core API-->
 <script type="text/javascript" src='helloworld/sc/modules/ISC_Core.js?isc_version=12.0p_2018-06-30.js'></script>
 
