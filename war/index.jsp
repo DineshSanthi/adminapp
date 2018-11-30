@@ -2,7 +2,7 @@
 
 <script>
 	var repo = window.repo ? window.repo : {};
-	repo.serviceUrl = "http://localhost:8082/";
+	repo.serviceUrl = "http://rest-service-repodepo.192.168.99.100.nip.io/";
 	
 	repo.objectDefinition = {};
 	
